@@ -1,69 +1,74 @@
-<!DOCTYPE html>
-<html>
-    <head>
+<?php
+session_start(); 
 
-        <title>Client Portal</title>
-        <link rel="Stylesheet" type="text/css" href="Style.css">
+include "client_database.php";
 
-        <img class="img" src='logo.jpg'/>
-        
-        <br><br><br><br><br>
-        
-        <div class="header">
-            <div class="inner_header">
-                <ul class="navigation">
-                    <a><li></li></a>
-                    <a><li></li></a>
-                    <a><li></li></a>
-                    <a><li></li></a>
-                </ul> 
-                
-            </div>
-        </div>
-            
-    
-            
-    </head>
+if (isset($_POST['uname']) && isset($_POST['password'])) {
 
-<body>
-
-<br><br>
-
-<form action="login.php" method="post">
-
-        <h2>CLIENT PORTAL</h2>
-
-        <?php if (isset($_GET['error'])) { ?>
-
-            <p class="error"><?php echo $_GET['error']; ?></p>
-
-        <?php } ?>
-
-        <label>User Name</label>
-        
-        <input type="text" name="uname" placeholder="User Name"><br>
-
-        <label>Password</label>
-        
-        <input type="password" name="password" placeholder="Password"><br> 
-
-        <button type="submit">Login</button>
-
-     </form>
-
-
-     <br><br>
+    function validate($data){
+       $data = trim($data);
+       $data = stripslashes($data);
+       $data = htmlspecialchars($data);
      
-     
-     <footer class="footer">
+       return $data;
+    }
 
-     <hr style="width:100%;text-align: center;margin-left:0">
-    
-     <p>                     Copyright @ 2021  Business Support CRM Web Application<br>
-                                www.businesssupportwebapplication.com</p>
-    
-     </footer>
+    $uname = validate($_POST['uname']);
+    $pass = validate($_POST['password']);
 
-</body>
+    if (empty($uname)) {
+        header("Location: client_index.php?error=User Name is required");
+        exit();
 
-</html>
+    }else if(empty($pass)){
+        header("Location: client_index.php?error=Password is required");
+        exit();
+
+    }else{
+
+        $sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) === 1) {
+            $row = mysqli_fetch_assoc($result);
+
+            if ($row['user_name'] === $uname && $row['password'] === $pass) {
+                echo "Logged in!";
+
+                $_SESSION['user_name'] = $row['user_name'];
+
+                $_SESSION['name'] = $row['name'];
+
+                $_SESSION['id'] = $row['id'];
+
+                header("Location: client_home.php");
+
+                exit();
+
+            }else{
+
+                header("Location: client_index.php?error=Incorrect User name or password");
+
+                exit();
+
+            }
+
+        }else{
+
+            header("Location: client_index.php?error=Incorrect User name or password");
+
+            exit();
+
+        }
+
+    }
+
+}else{
+
+    header("Location: client_index.php");
+
+    exit();
+
+}
+
