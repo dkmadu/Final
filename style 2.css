@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #e6eef3;
+  }
+  
+  .header {
+    margin-top: 10px;
+    margin-left: 216px;
+    margin-bottom: 5px;
+  }
+  
+  .devider {
+    background: #053741;
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
+  
+  .devider2 {
+    background: #053741;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: -20px;
+  }
+  
+  .footer-text {
+    padding-top: 14px;
+    text-align: center;
+  }
+  
+  .container {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 35vh;
+  }
+  
+  .wrapper {
+    border-radius: 20px;
+    background: #83d7ea;
+    padding: 50px 15px;
+    width: 970px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .wrapper .title {
+    font-size: 28px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .wrapper .sub_header {
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    padding-left: 15px;
+    display: block;
+    margin: 20px 0;
+    width: 50%;
+  }
+  
+  .input-field .input-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-top: 8px;
+  }
+  
+  .input-field .input {
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #ccc;
+    background: white;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.3s all ease;
+  }
+  
+  .input-field .input:focus {
+    border-color: #00a8ff;
+  }
+  
+  .btn {
+    font-family: "Poppins", sans-serif;
+    background: #c4c4c4;
+    padding: 8px;
+    width: 20%;
+    font-size: 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin: 5px 20px;
+    transition: 0.3s all ease;
+    border-radius: 25px;
+    box-shadow: 2px 2px 1px 0px;
+    float: right;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background: transparent;
+    border-color: #00a8ff;
+    color: #00a8ff;
+  }
+  
+  .wrapper .cancel {
+    font-family: "Poppins", sans-serif;
+    background: #c4c4c4;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    border-radius: 25px;
+    box-shadow: 2px 2px 1px 0px;
+    text-decoration: none;
+    float: right;
+    margin: 5px 10px;
+  }
+  
+  .wrapper .cancel:hover,
+  .wrapper .cancel:focus {
+    background: transparent;
+    border-color: #00a8ff;
+    color: #00a8ff;
+  }
+  
+  .wrapper .form p {
+    margin: 10px 0;
+    font-size: 14px;
+  
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 25px;
+    text-align: left !important;
+    font-size: 14px;
+  }
+  
+  .wrapper .form p a {
+    padding-left: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s all ease;
+    font-size: 14px;
+  }
+  
+  .wrapper .form p a:focus,
+  .wrapper .form p a:hover {
+    color: #00a8ff;
+  }
+  
+  .wrapper .dashboard .form-dashboard .p-dashboard .a-dashboard {
+    padding-top: 15px;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 18px;
+  }
+  
+  .wrapper .dashboard {
+    margin: 10px 0;
+    padding-top: 15px;
+    text-align: center;
+    padding-bottom: 25px;
+    font-size: 30px;
+  }
+  
