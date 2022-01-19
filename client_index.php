@@ -49,6 +49,8 @@
 
         <button type="submit">Login</button>
 
+        <button type="exit"><a class="exit" href="index.php">Cancel</a></button>
+
      </form>
 
 

@@ -22,7 +22,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                     <div class="inner_header">
 
                          <ul class="navigation">
-                              <li><a href="#">DASHBOARD</a></li>
+                              <li><a href="#">ADD CUSTOMER</a></li>
 
                               <li><a href="#">MANAGE CUSTOMER</a>
                                    <ul>
@@ -32,7 +32,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                    </ul>     
                               </li>
                               
-                              <li><a href="#">ADD CUSTOMER</a></li> 
+                              <li><a href="#">ORDERS</a></li> 
                          </ul> 
 
                     </div>

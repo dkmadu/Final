@@ -13,14 +13,15 @@
 <body>
 <style>.column {
     float: left;
-    width: 33.3%;
+    width: 40%;
     margin-bottom: 16px;
-    padding: 0 8px;
+    padding: 15px 25px;
   }
   @media screen and (max-width: 650px) {
     .column {
       width: 100%;
       display: block;
+      align: center;
     }
   }
   
@@ -60,13 +61,13 @@
     
 
     <div class="header">
-        <img src="logo.jpeg" alt="logo" />
+        <img src="logo.jpg" alt="logo" />
     </div>
     <div class="devider"></div>
     <!-- <hr class="rounded"> -->
     <div class="container">
         <div class="wrapper">
-            <h2 class="title">Home Page</h2>
+            <h2 class="title">Wecome to your CRM Web App</h2>
             <div class="row">
                 <div class="column">
                   <div class="card">
